@@ -1,4 +1,73 @@
-"Hellow World"
+//Matric Marksheet Code
+import 'dart:io';
 
+void main() {
+  print("Subjects");
+  print("Mathematics:");
+  var A = (stdin.readLineSync());
+  print("Physics:");
+  var B = (stdin.readLineSync());
+  print("Chemistry:");
+  var C = (stdin.readLineSync());
+  print("English I:");
+  var D = (stdin.readLineSync());
+  print("English II:");
+  var E = (stdin.readLineSync());
+  print("Pst:");
+  var F = (stdin.readLineSync());
+  print("Computer Science:");
+  var G = (stdin.readLineSync());
+  print("Islamiat:");
+  var H = (stdin.readLineSync());
+  print("Sindhi:");
+  var I = (stdin.readLineSync());
+  print("Urdu:");
+  var J = (stdin.readLineSync());
 
-Application of GitHUb
+  if (A != null &&
+      B != null &&
+      C != null &&
+      D != null &&
+      E != null &&
+      F != null &&
+      G != null &&
+      H != null &&
+      I != null &&
+      J != null) {
+    var num1 = num.parse(A);
+    var num2 = num.parse(B);
+    var num3 = num.parse(C);
+    var num4 = num.parse(D);
+    var num5 = num.parse(E);
+    var num6 = num.parse(F);
+    var num7 = num.parse(G);
+    var num8 = num.parse(H);
+    var num9 = num.parse(I);
+    var num10 = num.parse(J);
+
+    var O =
+        num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
+    print("Obtained Marks = ${O}");
+    var M = 850;
+    print("Maximun Marks = ${M}");
+    var R = O / M * 100;
+    if (O < M) {
+      print("Percentage:${R}%");
+    } else if (O >= M) {
+      print("Error");
+    }
+    if (O < M && R >= 80) {
+      print("GRADE:A-ONE");
+    } else if (80 > R && R >= 70) {
+      print("GRADE:A");
+    } else if (70 > R && R >= 60) {
+      print("GRADE:B");
+    } else if (60 > R && R >= 50) {
+      print("GRADE:C");
+    } else if (50 > R && R >= 40) {
+      print("GRADE:D");
+    } else if (R < 40) {
+      print("FAIL");
+    }
+  }
+}
